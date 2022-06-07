@@ -3,63 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Jogo da Pedra, Papel e Tesoura</title>
-    <style>
-      * {
-        font-family: Helvetica;
-        font-weight: 400;
-      }
-      
-      #placar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      #jogador, #computador {
-        position: relative;
-        flex-grow: 1;
-        border-radius: 5px;
-        width: 200px;
-        padding: 20px;
-        color: #fff;
-      }
-
-      #jogador {
-        background-color: #ff7675;
-      }
-
-      #computador {
-        background-color: #7469ff;
-      }
-      ul#jogador-escolha li, ul#computador-escolha li {
-        list-style: none;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        
-      }
-      ul#jogador-escolha li , ul#computador-escolha li {
-       display: inline;
-      }
-      ul#jogador-escolha li a img , ul#computador-escolha li a img {
-       max-width: 80px;
-      }
-
-    </style>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+    <title>Jogo Pedra, Papel e Tesoura</title>
   </head>
   <body>
     <div id="principal">
      <h1 id="titulo">Pedra, Papel e Tesoura</h1>
       <div id="placar">
       <div id="jogador">
-        <h2 id="jogador-nome">Felipe</h2>
+        <h2 id="jogador-nome">Deborah</h2>
           <span id="jogador-pontos">0</span>
 
           <ul id="jogador-escolha">
-          <li><a id="jogador-escolha-1"><img src="/image/img.pedra.png"></a></li>
-          <li><a id="jogador-escolha-2"><img src="/image/img.papel.png"></a></li>
-          <li><a id="jogador-escolha-3"><img src="/image/img.tesoura.png"></a></li>
+          <li><a id="jogador-escolha-1" onclick="jogar(1)"><img src="/image/img.pedra.png"></a></li>
+          <li><a id="jogador-escolha-2" onclick="jogar(2)"><img src="/image/img.papel.png"></a></li>
+          <li><a id="jogador-escolha-3" onclick="jogar(3)"><img src="/image/img.tesoura.png"></a></li>
         </ul>
         </div>
 
@@ -75,8 +34,8 @@
             <li><a id="computador-escolha-3"><img src="/image/img.tesoura.png"></a></li>
           </ul>
           </div>
-
         </div>
         </div>
+        <div id="mensagens">&nbsp;</div>
   </body>
 </html>
